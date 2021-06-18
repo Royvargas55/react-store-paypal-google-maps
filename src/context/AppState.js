@@ -28,11 +28,19 @@ export const AppState = ({children}) => {
         });
     };
 
+    const addNewOrder = payload => {
+        setState({
+            ...state,
+            orders: [...state.orders, payload]
+        });
+    };
+
     return <AppContext.Provider value={{
         state, 
         addToCart, 
         removeFromCart,
-        addToBuyer
+        addToBuyer,
+        addNewOrder
     }}> 
         {children}
     </AppContext.Provider>
