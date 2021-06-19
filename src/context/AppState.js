@@ -2,10 +2,15 @@
 import React, { useState } from 'react';
 import AppContext from './AppContext';
 import initialState from '../initialState';
+import useProducts from '../hooks/useProducts';
+
+const API = 'http://localhost:1337/products';
 
 export const AppState = ({children}) => {
     
     const [state, setState] = useState(initialState);
+
+    const products = useProducts(API);
 
     const addToCart = payload => {
         setState({
@@ -36,7 +41,8 @@ export const AppState = ({children}) => {
     };
 
     return <AppContext.Provider value={{
-        state, 
+        state,
+        products, 
         addToCart, 
         removeFromCart,
         addToBuyer,

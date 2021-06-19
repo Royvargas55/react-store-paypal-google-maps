@@ -1,13 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Products from '../components/Products';
-import useInitialState from '../hooks/useInitialState';
 
-const Home = () => {
-  const {
-    state: { products },
-  } = useInitialState();
-  return (
+const Home = () => (
     <div>
       <Helmet>
         <title>Roy Store - Productos</title>
@@ -31,9 +26,8 @@ const Home = () => {
         <meta property="og:locale" content="es_ES" />
         <meta property="og:type" content="article" />
       </Helmet>
-      <Products Products={products} />
+      <Products />
     </div>
   );
-};
 
 export default Home;
