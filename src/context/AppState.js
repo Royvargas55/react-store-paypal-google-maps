@@ -4,7 +4,7 @@ import AppContext from './AppContext';
 import initialState from '../initialState';
 import useProducts from '../hooks/useProducts';
 
-const API = 'http://localhost:1337/products';
+const API = 'https://strapi-backend-react-store.herokuapp.com/products';
 
 export const AppState = ({children}) => {
     

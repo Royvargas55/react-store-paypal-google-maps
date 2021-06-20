@@ -6,7 +6,7 @@ import '../styles/components/Products.css';
 
 const Product = ({Product, handleAddToCart}) => (
         <div className="Products-item">
-            <img src={`http://localhost:1337${Product.image[0].url}`} alt={Product.title} />
+            <img src={`https://strapi-backend-react-store.herokuapp.com${Product.image[0].url}`} alt={Product.title} />
             <div className="Products-item-info">
                 <h2>{Product.title}
                     <span>${Product.price}</span>
