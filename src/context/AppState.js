@@ -4,7 +4,7 @@ import AppContext from './AppContext';
 import initialState from '../initialState';
 import useProducts from '../hooks/useProducts';
 
-const API = 'https://strapi-backend-react-store.herokuapp.com/products';
+const API = 'https://us-central1-gndx-fake-api.cloudfunctions.net/api';
 
 export const AppState = ({children}) => {
     
